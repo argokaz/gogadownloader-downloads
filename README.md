@@ -78,10 +78,14 @@ como una nueva descarga remota de las cuatro fuentes en 1.7.0.
 
 Windows 1.7.0 pasó CI en Windows nativo: 146 comprobaciones con motores directos
 y 162 con motores comprimidos, WinUI y auditoría del instalador. En la ROG Ally
-pasaron la interfaz, cancelación y reanudación reales, AMF y la alternativa CPU.
-La actualización entre dos versiones de QA instaladas pasó con datos separados:
+pasaron Core, cancelación y reanudación reales, AMF y la alternativa CPU.
+La interfaz observada era un build previo con los mismos archivos de UI.
+La actualización de una app compilada localmente con el mismo código pasó
+entre dos versiones de QA instaladas, con datos separados:
 esperó a FFmpeg, bloqueó el reinicio durante el trabajo, conservó la actualización
 ante un fallo del feed y relanzó la nueva versión. El perfil habitual quedó idéntico.
+Esa prueba usó paquetes de QA; no instaló el Setup público exacto ni comprobó
+el salto instalado habitual 1.6.0 → 1.7.0 o un trabajo desde la UI final.
 Las lecturas puntuales de arranque no son un benchmark. No hay verificación
 en una VM Windows limpia ni garantía de descarga de un contenido concreto.
 
