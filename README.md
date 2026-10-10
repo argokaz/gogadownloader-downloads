@@ -98,7 +98,10 @@ los paquetes públicos provienen de la CI nativa final. El selector TXT se abri�
 pero la automatización no permitió completar esa ventana; el mismo API de
 escritura Windows sí conservó íntegro el contenido UTF-8 en una prueba nativa.
 No se presenta esto como instalación del Setup público ni como prueba del perfil
-habitual. La entrega de correo permanece bajo control del usuario.
+habitual. Abrir el cliente de correo quedó sin accionar por el requisito de
+confirmación humana directa del entorno de QA Windows; no se infiere un fallo
+del botón ni ausencia de cliente. La entrega de correo permanece bajo control
+del usuario.
 
 ### Evidencia de la versión anterior
 
