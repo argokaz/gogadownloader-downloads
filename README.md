@@ -6,16 +6,16 @@ cuando las necesitas.
 
 [Visita el sitio oficial](https://gogadownloader.vercel.app/) para conocer la app y elegir tu descarga.
 
-## Descargar 1.6.1
+## Descargar 1.7.0
 
 | Sistema | Descarga |
 | --- | --- |
-| **Mac · Apple Silicon** · macOS 13 o posterior | [ZIP para Mac](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.6.1/GogaDownloader-1.6.1-macOS-arm64.zip) |
-| **Windows 11 · x64** | [Instalador para Windows](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.6.1/GogaDownloader-win-Setup.exe) |
-| Windows · versión portable | [ZIP portable](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.6.1/GogaDownloader-win-Portable.zip) |
+| **Mac · Apple Silicon** · macOS 13 o posterior | [ZIP para Mac](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/GogaDownloader-1.7.0-macOS-arm64.zip) |
+| **Windows 11 · x64** | [Instalador para Windows](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/GogaDownloader-win-Setup.exe) |
+| Windows · versión portable | [ZIP portable](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/GogaDownloader-win-Portable.zip) |
 
-[Todos los archivos de la release](https://github.com/argokaz/gogadownloader-downloads/releases/tag/v1.6.1)
-· [Checksums SHA-256](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.6.1/SHA256SUMS)
+[Todos los archivos de la release](https://github.com/argokaz/gogadownloader-downloads/releases/tag/v1.7.0)
+· [Checksums SHA-256](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/SHA256SUMS)
 
 En Mac, descomprime y mueve GogaDownloader.app a Applications o a ~/Applications.
 En Windows, ejecuta el instalador por usuario. La edición portable se extrae en
@@ -33,8 +33,13 @@ el publicado antes de abrir el paquete.
 - Audio M4A conservando AAC, o conversión explícita a MP3, FLAC y Opus.
 - Calidad original en MKV y conversión explícita a MP4 hasta 4K.
 - Vista previa opcional, progreso, cancelación y acceso al archivo final.
+- Pegar y descargar con la calidad y carpeta visibles, sin vista previa obligatoria.
+- Inicio sin comprobaciones de motores en el hilo de interfaz; Windows comprueba
+  AMF al pedir una conversión 4K explícita.
+- Recuperación de parciales con el mismo enlace, calidad y destino, si la fuente
+  permite continuar. Video, audio, unión y verificación se muestran por etapas.
 - Actualización de la app y de los motores por separado; las descargas activas
-  bloquean el reinicio para instalar.
+  tienen prioridad sobre las transferencias de actualización y bloquean el reinicio.
 
 La resolución depende de la fuente. En Mac, los videos verticales se limitan por
 su lado corto; Windows comprueba la altura. Mac también puede separar AAC de un
@@ -49,31 +54,39 @@ pueden impedir la descarga. No se importan cookies del navegador automáticament
 
 ## Actualizaciones
 
-El engranaje permite buscar actualizaciones de la aplicación y de los motores.
+En Herramientas, pulsa **Revisar actualizaciones**. Mac también ofrece esa acción
+en el menú **GogaDownloader**. Busca las nuevas versiones publicadas en GitHub.
 Mac consulta la release estable y verifica el ZIP antes de **Instalar y reiniciar**;
 conserva una copia anterior. Windows usa Velopack con el feed de este repositorio.
-No se reemplazan motores durante descargas o conversiones.
+Tú eliges cuándo instalar y reiniciar. No se reemplazan motores durante descargas
+o conversiones. Para las actualizaciones integradas de la aplicación se recomienda
+el instalador; la actualización entre versiones del ZIP portable no se ha verificado.
 
-Si vienes de Mac 1.3 o Windows 1.6.0, instala 1.6.1 una vez desde esta página
+Si vienes de Mac 1.3 o Windows 1.6.0, instala 1.7.0 una vez desde esta página
 para activar el canal público. Esas versiones anteriores todavía no conocen
 el nuevo canal; no recibirán esta primera actualización automáticamente.
 
 ## Verificación y componentes
 
-Mac 1.6.1 se comprobó en un Mac Apple Silicon: descargas públicas de las cuatro
-plataformas, MP4 compatible, MKV original, extracción AAC/M4A, cancelación y
-actualización real entre bundles de prueba. La interfaz se revisó en claro y
-oscuro, con opciones plegadas y desplegadas.
+Mac 1.7.0 pasó las comprobaciones de modelos, motores, procesos, validación de
+medios, recuperación y actualización entre bundles de prueba. Se completó una
+descarga real de YouTube a 1080p tras recuperar el parcial de un intento fallido.
+Las pruebas locales de reanudación comprobaron HTTP Range y coincidencia exacta
+de bytes al renovar el enlace CDN y cambiar el título. Las cuatro plataformas,
+MKV y AAC/M4A se comprobaron en la versión 1.6.1; no se presenta esa evidencia
+como una nueva descarga remota de las cuatro fuentes en 1.7.0.
 
-Windows conserva la interfaz y los servicios validados en la ROG Ally con
-1.5.1/1.6.0. El paquete público 1.6.1 se compiló y comprobó en Windows nativo en
-GitHub Actions, incluidos los motores propios, Core y contenido del instalador.
-No se presenta como una nueva prueba de UI/AMF en la Ally ni como instalación
-verificada en una VM limpia.
+Windows 1.7.0 pasó CI en Windows nativo: 146 comprobaciones con motores directos
+y 162 con motores comprimidos, WinUI y auditoría del instalador. En la ROG Ally
+pasaron la interfaz, cancelación y reanudación reales, AMF y la alternativa CPU.
+La actualización entre dos versiones de QA instaladas pasó con datos separados:
+esperó a FFmpeg, bloqueó el reinicio durante el trabajo, conservó la actualización
+ante un fallo del feed y relanzó la nueva versión. El perfil habitual quedó idéntico.
+Las lecturas puntuales de arranque no son un benchmark. No hay verificación
+en una VM Windows limpia ni garantía de descarga de un contenido concreto.
 
-El instalador, el portable y el paquete de actualización de Windows 1.6.1
-se analizaron con Microsoft Defender el 9 de octubre de 2026, con firmas actuales
-y sin detecciones. El [informe con los hashes exactos](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.6.1/GogaDownloader-Windows-1.6.1-Defender-Scan.json)
+El instalador, el portable y el paquete de actualización de Windows 1.7.0
+se analizaron con Microsoft Defender el 9 de octubre de 2026 en Lima, sin detecciones. El [informe con los hashes exactos](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/GogaDownloader-Windows-1.7.0-Defender-Scan.json)
 registra esos archivos y esa fecha; no es una certificación ni una garantía
 absoluta de ausencia de malware. No se declara un análisis antivirus de Mac.
 
