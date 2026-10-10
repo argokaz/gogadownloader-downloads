@@ -6,16 +6,16 @@ cuando las necesitas.
 
 [Visita el sitio oficial](https://gogadownloader.vercel.app/) para conocer la app y elegir tu descarga.
 
-## Descargar 1.7.0
+## Descargar 1.7.1
 
 | Sistema | Descarga |
 | --- | --- |
-| **Mac · Apple Silicon** · macOS 13 o posterior | [ZIP para Mac](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/GogaDownloader-1.7.0-macOS-arm64.zip) |
-| **Windows 11 · x64** | [Instalador para Windows](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/GogaDownloader-win-Setup.exe) |
-| Windows · versión portable | [ZIP portable](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/GogaDownloader-win-Portable.zip) |
+| **Mac con chip M1, M2, M3 o posterior** · macOS 13+ | [Descargar para Mac · Apple Silicon](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.1/GogaDownloader-1.7.1-Mac-Apple-Silicon.zip) |
+| **Windows 11 · x64** | [Descargar instalador para Windows](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.1/GogaDownloader-1.7.1-Windows-Instalador.exe) |
+| Windows · versión portable | [ZIP portable](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.1/GogaDownloader-1.7.1-Windows-Portable.zip) |
 
-[Todos los archivos de la release](https://github.com/argokaz/gogadownloader-downloads/releases/tag/v1.7.0)
-· [Checksums SHA-256](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.0/SHA256SUMS)
+[Todos los archivos de la release](https://github.com/argokaz/gogadownloader-downloads/releases/tag/v1.7.1)
+· [Checksums SHA-256](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.1/SHA256SUMS)
 
 En Mac, descomprime y mueve GogaDownloader.app a Applications o a ~/Applications.
 En Windows, ejecuta el instalador por usuario. La edición portable se extrae en
@@ -62,11 +62,46 @@ Tú eliges cuándo instalar y reiniciar. No se reemplazan motores durante descar
 o conversiones. Para las actualizaciones integradas de la aplicación se recomienda
 el instalador; la actualización entre versiones del ZIP portable no se ha verificado.
 
-Si vienes de Mac 1.3 o Windows 1.6.0, instala 1.7.0 una vez desde esta página
+Si vienes de Mac 1.3 o Windows 1.6.0, instala 1.7.1 una vez desde esta página
 para activar el canal público. Esas versiones anteriores todavía no conocen
 el nuevo canal; no recibirán esta primera actualización automáticamente.
 
+## Reportar un problema
+
+Al fallar una descarga, pulsa **Reportar problema…**. Revisa el diagnóstico y
+elige copiar, guardar TXT o abrir un borrador dirigido a **admin@arturogoga.com**.
+Tú decides si lo envías desde tu cliente de correo. Si usas webmail, puedes
+copiarlo o adjuntar el TXT. El último reporte se recupera desde Herramientas.
+
+El reporte conserva la versión, plataforma, selección y fase del intento fallido,
+junto a señales técnicas reconocidas. No adjunta enlaces ni títulos de videos,
+rutas, IP, cookies o credenciales. No envía telemetría ni correos automáticamente.
+
 ## Verificación y componentes
+
+La versión 1.7.1 pasó ocho suites de comprobaciones Mac, compilación arm64 y
+revisión del diálogo de reporte en claro y oscuro. Windows pasó 167 checks con
+motores directos y 183 con motores comprimidos, compilación WinUI autocontenida,
+auditoría del instalador y comprobación de los alias de descarga. Los motores y
+sus fuentes permanecen idénticos a los de 1.7.0.
+
+El instalador, el portable y el paquete de actualización de Windows 1.7.1
+se analizaron con Microsoft Defender el **10 de octubre de 2026**, sin detecciones.
+El [informe con sus hashes](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.1/GogaDownloader-Windows-1.7.1-Defender-Scan.json)
+registra archivos, firmas y fecha; no es una certificación. No se declara un
+análisis antivirus de Mac ni entrega o recepción de correo.
+
+En la ROG Ally se comprobó el visor de reportes completo en claro y oscuro,
+el desplazamiento hasta la última línea, la copia de 23 líneas y la recuperación
+íntegra tras reiniciar. Se usó una variante con datos y mutex de QA separados;
+los paquetes públicos provienen de la CI nativa final. El selector TXT se abrió,
+pero la automatización no permitió completar esa ventana; el mismo API de
+escritura Windows sí conservó íntegro el contenido UTF-8 en una prueba nativa.
+No se presenta esto como instalación del Setup público ni como prueba del perfil
+habitual. La entrega de correo permanece bajo control del usuario.
+
+### Evidencia de la versión anterior
+
 
 Mac 1.7.0 pasó las comprobaciones de modelos, motores, procesos, validación de
 medios, recuperación y actualización entre bundles de prueba. Se completó una
