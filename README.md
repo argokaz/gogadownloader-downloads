@@ -4,23 +4,27 @@ Descarga video o audio de **YouTube, Instagram, TikTok y X** desde una app nativ
 
 [Visita la web oficial](https://gogadownloader.vercel.app/) para conocer la app y consultar la guía de instalación.
 
-## Descargar 1.7.2
+## Descargar 1.7.3
 
 | Sistema | Descarga |
 | --- | --- |
-| **Mac con chip M1, M2, M3 o posterior** · macOS 13+ | [Descargar para Mac · Apple Silicon](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.2/GogaDownloader-1.7.2-Mac-Apple-Silicon.zip) |
-| **Windows 11 · x64** | [Descargar instalador para Windows](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.2/GogaDownloader-1.7.2-Windows-Instalador.exe) |
-| Windows · versión portable | [ZIP portable](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.2/GogaDownloader-1.7.2-Windows-Portable.zip) |
+| **Mac con chip M1, M2, M3 o posterior** · macOS 13+ | [Descargar para Mac · Apple Silicon](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.3/GogaDownloader-1.7.3-Mac-Apple-Silicon.zip) |
+| **Windows 11 · x64** | [Descargar instalador para Windows](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.3/GogaDownloader-1.7.3-Windows-Instalador.exe) |
+| Windows · versión portable | [ZIP portable](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.3/GogaDownloader-1.7.3-Windows-Portable.zip) |
 
-[Todos los archivos](https://github.com/argokaz/gogadownloader-downloads/releases/tag/v1.7.2) · [SHA-256](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.2/SHA256SUMS)
+[Todos los archivos](https://github.com/argokaz/gogadownloader-downloads/releases/tag/v1.7.3) · [SHA-256](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.3/SHA256SUMS)
 
 En Mac, descomprime y mueve GogaDownloader.app a Applications o a ~/Applications. En Windows, ejecuta el instalador por usuario. Para la actualización integrada de Windows se recomienda el instalador; la edición portable es una alternativa manual. No hay un paquete Mac Intel en esta release.
 
-## Corrección de actualización en Mac
+## Apertura más rápida en Mac
 
-La versión **1.7.2** cierra el panel de Herramientas antes de instalar y reiniciar. Si una versión anterior muestra «El reinicio se canceló», **cierra la app y reemplázala manualmente una vez con este ZIP**. El arreglo debe estar instalado para que los reinicios futuros puedan usarlo. No se borran preferencias, motores mutables ni descargas.
+Mac **1.7.3** recupera las herramientas ya validadas sin repetir sus procesos de versión en cada apertura. Tras **15 días sin abrir**, revisa en segundo plano y permite seguir descargando. Si los ejecutables cambian, vuelve a validarlos. La primera preparación sí requiere una validación local.
 
-Windows conserva el comportamiento de 1.7.1 y se recompila con la versión nueva para mantener su feed de actualizaciones completo.
+Las consultas de versiones nuevas ocurren como máximo una vez cada 24 horas, también si falla la red; la revisión manual sigue disponible. Se corrigió además una espera que podía quedar bloqueada por un proceso hijo.
+
+Mac 1.7.2 puede instalar desde Herramientas. Si una versión 1.7.0/1.7.1 muestra «El reinicio se canceló», cierra la app y reemplázala manualmente una vez con el ZIP. Se conservan preferencias, herramientas mutables y descargas.
+
+**Windows conserva el comportamiento de 1.7.2** y se recompila con la versión nueva para mantener completo el feed compartido. La mejora de arranque de esta release corresponde a Mac.
 
 ## Qué puedes hacer
 
@@ -42,9 +46,9 @@ No se adjuntan enlaces ni títulos de videos, carpetas, IP, cookies o credencial
 
 ## Paquetes y verificación
 
-La corrección Mac pasó una regresión nativa con un panel SwiftUI real: primero se reprodujo el fallo original y después se verificó cierre, reemplazo, relanzamiento, firma, respaldo y conservación de datos en bundles temporales.
+Mac verificó cinco gestores nuevos y tres procesos independientes sin repetir probes, revisión tras 16 días de inactividad con una descarga activa, invalidación por cambios de archivo, un hijo que retenía la salida y el límite diario incluso con HTTP 503. Pasaron también las ocho suites habituales y una verificación final de la coordinación de revisiones pendientes.
 
-Windows 1.7.2 pasó 167 checks con motores directos y 183 con motores comprimidos, build WinUI y auditoría del instalador. El instalador, portable y paquete de actualización se analizaron con Defender el 10 de octubre de 2026 sin detecciones; [consulta el informe con hashes](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.2/GogaDownloader-Windows-1.7.2-Defender-Scan.json). Esta release Windows no recibió una nueva instalación ni prueba de interfaz en la Ally.
+Windows 1.7.3 pasó 167 checks con motores directos y 183 con motores comprimidos, build WinUI y auditoría del instalador. El instalador, portable y paquete de actualización se analizaron con Defender el 15 de octubre de 2026 sin detecciones; [consulta el informe con hashes](https://github.com/argokaz/gogadownloader-downloads/releases/download/v1.7.3/GogaDownloader-Windows-1.7.3-Defender-Scan.json). Esta release Windows no recibió una nueva instalación ni prueba de interfaz en la Ally.
 
 Los motores mantienen los bytes auditados de las versiones anteriores. Las fuentes, recetas y avisos correspondientes se adjuntan a la release. No necesitas descargar esos archivos para usar la app; los feeds y nupkg son para el actualizador.
 
